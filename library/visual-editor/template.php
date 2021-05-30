@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="de" style="background: #eee;">
+
+<head>
+
+	<meta charset="<?php bloginfo('charset'); ?>" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<title>Visueller Editor: Laden</title>
+	<link rel="shortcut icon" type="image/png" href="<?php echo upfront_url() . "/library/visual-editor/images/logo.png"; ?>"/>
+
+	<?php
+
+		do_action('upfront_visual_editor_head');
+
+		if (UpFrontOption::get('headway-support')) {
+			do_action('headway_visual_editor_head');
+		}
+
+		if (UpFrontOption::get('bloxtheme-support')) {
+			do_action('blox_visual_editor_head');
+		}
+
+	?>
+
+</head><!-- /head -->
+
+<!-- Diese Hintergrundfarbe wurde eingefügt, um das weiße Flimmern während des Ladens zu reduzieren. -->
+
+<body class="wp-core-ui visual-editor-open visual-editor-mode-<?php echo UpFrontVisualEditor::get_current_mode() . ' ' . join(' ', get_body_class()); ?>" style="background: #1c1c1c;">
+
+	<?php do_action('upfront_visual_editor_body_open'); ?>
+
+	<div id="ve-loading-overlay">
+		<div class="lotus">
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+			<div class="lotus_leaf"></div>
+		</div>
+	</div>
+
+	<div id="menu">
+		<span id="logo"></span>
+
+		<ul id="modes" class="top-menu-nav">
+			<?php do_action('upfront_visual_editor_modes'); ?>
+		</ul>
+
+		<?php do_action('upfront_visual_editor_menu'); ?>
+
+
+		<!--	Gerätevorschau-Optionen	 -->
+		<div class="devices-wrapper">
+			<div class="devices">
+				<button type="button" class="preview-desktop" aria-pressed="false" data-device="desktop">
+				</button>
+				<button type="button" class="preview-tablet" aria-pressed="false" data-device="tablet">
+				</button>
+				<button type="button" class="preview-mobile" aria-pressed="true" data-device="mobile">
+				</button>
+			</div>
+		</div>
+
+		<!--	Undo / Redo Optionen	 -->
+		<div class="history-wrapper">
+			<div class="occurences">
+				<button type="button" class="undo">
+				</button>
+				<button type="button" class="redo">
+				</button>
+			</div>
+		</div>
+
+		<!--	Aktuelle Blockinfo	 -->
+		<div class="current-block-info">
+		</div>
+
+		<div id="menu-right">
+
+			<?php do_action('upfront_visual_editor_menu_mode_buttons'); ?>
+
+			<ul class="top-menu-nav">				
+				<li id="switch-edit-or-nav">
+					<span>Navigation</span>
+					<div class="toggle-mode">
+						<div class="toggle-switch">
+							<label class="switch">
+								<input type="checkbox" id="switch-navigation">
+								<div class="slider round"></div>
+							</label>
+						</div>
+					</div>
+				</li>
+				<li id="switch-mode">
+					<div class="toggle-mode">
+						<div class="icon light"></div>
+						<div class="toggle-switch">
+							<label class="switch">
+								<input type="checkbox" id="switch-style">
+								<div class="slider round"></div>
+							</label>
+						</div>
+						<div class="icon night"></div>
+					</div>
+				</li>
+				<li id="snapshots-button">
+					<span>Snapshots</span>
+				</li>
+
+				<?php do_action('upfront_visual_editor_menu_links'); ?>
+			</ul>
+
+			<div id="save-button-container" class="save-button-container" style="margin-right:-76px;">
+				<span id="save-button" class="save-button">Speichern</span>
+			</div>
+
+		</div><!-- #menu-right -->
+
+		<div id="mobile-menu"></div>
+	</div><!-- #menu -->
+
+
+	<!-- iframe -->
+	<div id="customize-preview" class="wp-full-overlay-main">
+		<div id="iframe-container">
+			<?php
+
+			$layout_url = UpFrontVisualEditor::get_current_mode() == 'grid' ? home_url() : UpFrontLayout::get_url(UpFrontLayout::get_current());
+
+	        $current_layout_status = UpFrontLayout::get_status(UpFrontLayout::get_current());
+
+			$iframe_url = add_query_arg(array(
+				've-iframe' 				=> 'true',
+				've-layout' 				=> urlencode(UpFrontLayout::get_current()),
+	            've-layout-customized' 		=> upfront_get('customized', $current_layout_status, false) ? 'true' : 'false',
+	            've-iframe-mode' 			=> UpFrontVisualEditor::get_current_mode(),
+				'rand' 						=> rand(1, 999999)
+			), $layout_url);
+
+			echo '<iframe id="content" class="content" src="' . $iframe_url . '" scrolling="yes" sandbox="allow-same-origin allow-scripts" ></iframe>';
+
+			?>
+
+			<div id="iframe-overlay"></div>
+			<div id="iframe-loading-overlay">
+				<div class="lotus">
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+					<div class="lotus_leaf"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>	
+	<!-- #iframe#content -->
+
+	<div id="panel">
+
+		<div id="panel-top-container">
+
+			<ul id="panel-top">
+
+				<?php do_action('upfront_visual_editor_panel_top_tabs'); ?>
+
+			</ul><!-- #ul#panel-top -->
+
+			<ul id="panel-top-right">
+
+				<?php do_action('upfront_visual_editor_panel_top_right'); ?>
+
+			</ul><!-- #ul#panel-top -->
+
+		</div><!-- #div#panel-top-container -->
+
+		<?php do_action('upfront_visual_editor_content'); ?>
+
+	</div><!-- div#panel -->
+
+
+	<?php
+	if ( has_action('upfront_visual_editor_side_panel') ) {
+
+		echo '<div id="side-panel-container">
+
+			<div id="side-panel">';
+
+				do_action('upfront_visual_editor_side_panel');
+
+		echo '</div><!-- #side-panel -->
+		<span id="change-side-of-panel" title=""></span>
+		</div><!-- #side-panel-container -->';
+
+	}
+	?>
+
+
+	<div id="boxes">
+		<?php do_action('upfront_visual_editor_boxes'); ?>
+	</div><!-- div#boxes -->
+
+	<?php do_action('upfront_visual_editor_footer'); ?>
+
+	<div id="notification-center"></div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+$("#menu").bind("touchmove",function(event){event.preventDefault();});

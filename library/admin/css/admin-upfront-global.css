@@ -1,0 +1,152 @@
+#adminmenu li[class*="toplevel_page_upfront"] .wp-menu-image img {
+    width: 16px;
+    height: 16px;
+}
+
+#customize-current-theme-link {
+    display: none;
+}
+
+#upfront-admin-notifications {
+    position: fixed;
+    top: 45px;
+    right: 20px;
+    z-index: 14;
+}
+
+#upfront-admin-notifications div {
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.upfront-admin-options-group {}
+
+.upfront-admin-options-group>h2.hndle {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0 !important;
+    line-height: 1.4;
+}
+
+.upfront-postbox-container {
+    width: 100%;
+}
+
+.upfront-postbox-container>.upfront-admin-options-group>h2.hndle {
+    margin-bottom: 0px !important;
+    width: calc( 100% - 64px);
+    display: inline-block;
+}
+
+.upfront-admin-options-group .handlediv .toggle-indicator:before {
+    margin-top: 4px;
+    width: 20px;
+    border-radius: 50%;
+    text-indent: -1px;
+    content: "\f142";
+    display: inline-block;
+    font: normal 20px/1 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none!important;
+}
+
+.upfront-admin-options-group .upfront-fields {}
+
+.upfront-admin-options-group .upfront-fields.inside {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.upfront-admin-options-group .upfront-fields.left {}
+
+.upfront-admin-options-group .upfront-field {
+    padding: 15px 0;
+    margin: 0;
+    position: relative;
+    border-top: #EEEEEE solid 1px;
+}
+
+.upfront-admin-options-group .upfront-fields.left .upfront-field:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background: #F9F9F9;
+    border-color: #E1E1E1;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+}
+
+.upfront-admin-options-group .upfront-fields.left .upfront-field:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.upfront-admin-options-group .upfront-field:first-child {
+    border-top-width: 0;
+}
+
+.upfront-admin-options-group .upfront-label {
+    float: left;
+    width: 20%;
+    margin: 0;
+    padding: 0 12px;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.upfront-admin-options-group .upfront-label label {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 3px;
+    padding: 0;
+}
+
+.upfront-admin-options-group .upfront-label p.description {
+    font-weight: 400;
+}
+
+.upfront-admin-options-group .upfront-input {
+    float: left;
+    width: 80%;
+    margin: 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.big-tab.big-tab-visible .upfront-postbox-container {
+    display: block !important;
+}
+
+.big-tab .upfront-admin-options-group.closed .handlediv .toggle-indicator:before {
+    content: "\f140";
+}
+
+.nav-tab-wrapper.big-tabs-tabs {
+    margin-bottom: 15px;
+}
+
+.nav-tab-wrapper.big-tabs-tabs {}
+
+a.upfront-admin-social-icon.first {
+    margin-left: 50px !important;
+}
+
+a.upfront-admin-social-icon {
+    display: inline-block;
+    margin-left: 0 !important;
+}
+
+a.upfront-admin-social-icon img {
+    width: 50px;
+    padding-top: 5px;
+}
