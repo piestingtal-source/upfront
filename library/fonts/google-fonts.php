@@ -3,7 +3,7 @@ class UpFrontGoogleFonts extends UpFrontWebFontProvider {
 
 
 	public $id 					= 'google';
-	public $name 				= 'Google Web Schriftarten';
+	public $name 				= 'Google Web Fonts';
 	public $webfont_provider 	= 'google';
 	public $load_with_ajax 		= true;
 
@@ -16,10 +16,10 @@ class UpFrontGoogleFonts extends UpFrontWebFontProvider {
 		'style' 		=> 'Style'
 	);
 
-	//protected $api_url = UPFRONT_API_URL . 'googlefonts';
+	protected $api_url = UPFRONT_API_URL . 'googlefonts';
 
 	// ToDo: arrange backuplocation
-    //protected $backup_api_url = UPFRONT_API_URL . 'googlefonts';
+    protected $backup_api_url = UPFRONT_API_URL . 'googlefonts';
 
 
 	public function query_fonts($sortby = 'date', $retry = false) {
