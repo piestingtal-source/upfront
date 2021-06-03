@@ -3,7 +3,7 @@ class UpFrontTraditionalFonts extends UpFrontWebFontProvider {
 
 	public $id = 'traditional';
 
-	public $name = 'Traditional Schriftarten';
+	public $name = 'Traditionelle Schriftarten';
 
 	public $webfont_provider = false;
 
