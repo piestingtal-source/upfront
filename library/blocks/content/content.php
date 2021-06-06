@@ -1167,7 +1167,7 @@ class UpFrontContentBlockOptions extends UpFrontBlockOptionsAPI {
 					'label' => __('Kommentare Sichtbarkeit', 'upfront'),
 					'default' => 'auto',
 					'options' => array(
-						'auto' => 'Automatic',
+						'auto' => 'Automatisch',
 						'hide' => __('Kommentare immer ausblenden', 'upfront'),
 						'show' => __('Kommentare immer anzeigen', 'upfront')
 					),
