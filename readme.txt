@@ -1,23 +1,49 @@
 === UpFront ===
-Contributors: WMS N@W
+Contributors: DerN3rd (WMS N@W)
+Donate link: https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
+Tags: theme, template, template builder, builder, theme builder, upfront, flexible, flexible-header
 Requires at least: WordPress 4.7
 Tested up to: WordPress 5.7.0
 Version: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: theme, template, template builder, builder, theme builder, upfront, flexible, flexible-header
+
+UpFront ist ein Wordpress Framework-Vorlagensystem. Mit UpFront kannst Du ganz einfach die schönsten WordPress-Webseiten erstellen, die aus einer völlig leeren Leinwand erstellt wurden.
 
 == Description ==
 
 UpFront ist ein Wordpress Framework-Vorlagensystem. Mit UpFront kannst Du ganz einfach die schönsten WordPress-Webseiten erstellen, die aus einer völlig leeren Leinwand erstellt wurden.
 
+(Framework Template System mit > PHP 8, 7.4, 7.3, WordPress 5.x, Gutenberg & ClassicPress Support)
 
-== Installation ==
+UpFront Theme Builder ist eine Abzweigung von Headway Themes 3.8.X, die entwickelt wurde, um eine aktualisierte und verbesserte Alternative zu WordPress und ClassicPress Theme Building bereitzustellen. 
+Erstelle unbegrenzte Webseiten und Vorlagen für den persönlichen und kommerziellen Gebrauch mit den neuesten Technologien und leistungsstärksten Tools.
 
-1. Upload UpFront Base via FTP to your wp-content/themes/ directory.
-2. Go to your WordPress dashboard and select Appearance.
-3. Select UpFront and click activate.
+UpFront Theme Builder ermöglicht es Benutzern von HWT 3.8.X und BT 1.X, Deine veralteten Webseiten KOSTENLOS auf ein aktualisiertes und verbessertes Entwicklungs-Framework zu migrieren.
 
+=== Installation ===
+
+1. Lade den entpackten UpFront Ordner per FTP in Dein wp-content/themes/-Verzeichnis hoch.
+2. Verwende Alternativ den Theme-Uploader im Admin-Dashboard (Beachte das du etwas mehr mx_upload in deiner php.ini eingestellt haben solltest)
+2. Gehe zu Deinem WordPress-Dashboard und wähle Designs.
+3. Wähle UpFront aus und klicke auf Aktivieren.
+
+=== Hilfe und Support ===
+
+[Projektseite](https://n3rds.work/piestingtal_source/upfront/)
+[Handbuch](https://n3rds.work/docs/upfront-theme-handbuch/)
+[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/upfront-theme-supportforum/)
+[GitHub](https://github.com/piestingtal-source/upfront)
+
+== Piestingtal.Source ==
+
+Natürlich gibt es auch weitere Piestingtal.Source, welche die Funktionen dieses Theme-Builde erweitern:
+
+=== Empfohlene Plugins ===
+
+=== Noch mehr Piestingtal.Source ===
+
+All unsere Piestingtal.Source (PSOURCE) findest Du auf unserer [Homepage](https://n3rds.work/psource_kategorien/psource-plugins/).
 
 == Copyright ==
 
@@ -36,7 +62,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
-
 
 == Changelog ==
 
