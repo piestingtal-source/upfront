@@ -35,15 +35,26 @@ UpFront Theme Builder ermöglicht es Benutzern von HWT 3.8.X und BT 1.X, Deine v
 [Supportforum](https://n3rds.work/forums/forum/psource-support-foren/upfront-theme-supportforum/)
 [GitHub](https://github.com/piestingtal-source/upfront)
 
-== Piestingtal.Source ==
+== Mehr Psource ==
 
 Natürlich gibt es auch weitere Piestingtal.Source, welche die Funktionen dieses Theme-Builde erweitern:
 
-=== Empfohlene Plugins ===
+= Empfohlene Plugins =
 
-=== Noch mehr Piestingtal.Source ===
+= Noch mehr Piestingtal.Source =
 
 All unsere Piestingtal.Source (PSOURCE) findest Du auf unserer [Homepage](https://n3rds.work/psource_kategorien/psource-plugins/).
+
+== Hilf uns ==
+
+Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
+Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
+
+= Unterstütze uns =
+
+Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
+
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
 
 == Copyright ==
 
