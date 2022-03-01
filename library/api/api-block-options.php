@@ -165,7 +165,7 @@ class UpFrontBlockOptionsAPI extends UpFrontVisualEditorPanelAPI {
 			$this->inputs = array();
 
 		//Add the tab
-		$this->tabs['config'] = 'Konfig';
+		$this->tabs['config'] = 'Konfiguration';
 
 		/* Add the inputs */
 

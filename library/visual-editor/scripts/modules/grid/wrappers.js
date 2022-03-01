@@ -292,7 +292,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
     addEdgeInsertWrapperButtons = function() {
 
-        var buttons = '<div class="add-wrapper-button-fixed tooltip" title="Add Wrapper">+</div>';
+        var buttons = '<div class="add-wrapper-button-fixed tooltip" title="Neuer Container">+</div>';
 
         $('<div class="add-wrapper-buttons add-wrapper-buttons-top">' + buttons + '</div>')
             .data('position', 'top')
