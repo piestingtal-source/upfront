@@ -31,7 +31,7 @@ class GridSetupPanel extends UpFrontVisualEditorPanelAPI {
 					'name' => 'columns',
 					'label' => __('Standardspaltenanzahl', 'upfront'), /* Column count is default only because you can't change it on the fly */
 					'default' => 24,
-					'tooltip' => __('Die Spaltenanzahl ist die Anzahl der Spalten im Gitter. Dies wird durch die grauen Bereiche im Gitter dargestellt.<br /><br /><strong>Dies wirkt sich NICHT auf bereits erstellte Wrapper aus. Dies betrifft nur Wrapper, die erstellt werden, nachdem diese Einstellung geändert wurde.</strong>', 'upfront'),
+					'tooltip' => __('Die Spaltenanzahl ist die Anzahl der Spalten im Gitter. Dies wird durch die grauen Bereiche im Gitter dargestellt.<br /><br /><strong>Dies wirkt sich NICHT auf bereits erstellte Container aus. Dies betrifft nur Container, die erstellt werden, nachdem diese Einstellung geändert wurde.</strong>', 'upfront'),
 					'slider-min' => 6,
 					'slider-max' => 24,
 					'slider-interval' => 1,

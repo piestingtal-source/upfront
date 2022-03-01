@@ -161,7 +161,7 @@ define(['jquery', 'modules/grid/grid', 'deps/itstylesheet', 'modules/grid/wrappe
         /* Define round precision in one place so it can be changed if necessary */
         var roundPrecision = 9;
 
-        /* Wrapper CSS Prefix that way these changes don't modify other wrappers */
+        /* Container CSS Prefix that way these changes don't modify other wrappers */
         var wrapperCSSPrefix = wrapperCSSSelector + ' ';
 
         /* Send calculated percentages to CSS */
@@ -179,7 +179,7 @@ define(['jquery', 'modules/grid/grid', 'deps/itstylesheet', 'modules/grid/wrappe
         /* Grid Container */
         gridStylesheet.update_rule(wrapperCSSPrefix + 'div.grid-container', { width: (gridWidth + 1) + 'px' });
 
-        /* Wrapper */
+        /* Container */
         gridStylesheet.update_rule(wrapperCSSSelector + '.wrapper-fixed', { width: (gridWidth) + 'px' });
 
         /* Update Grid Width Read-Only Input If Present */

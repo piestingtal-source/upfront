@@ -342,10 +342,10 @@ class UpFrontDataPortability {
 
 		/* Check if block exists */
 			if ( !$wrapper )
-				die('Fehler: Wrapper-Einstellungen konnten nicht exportiert werden.');
+				die('Fehler: Container-Einstellungen konnten nicht exportiert werden.');
 
 		/* Spit the file out */
-			return self::to_json('Wrapper Settings - ' . $wrapper['id'], 'wrapper-settings', array(
+			return self::to_json('Container Einstellungen - ' . $wrapper['id'], 'wrapper-settings', array(
 				'id' => $wrapper['id'],
 				'settings' => $wrapper['settings']
 			));

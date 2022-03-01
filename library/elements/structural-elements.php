@@ -28,7 +28,7 @@ function upfront_register_structural_elements() {
 		UpFrontElementAPI::register_element(array(
 			'group' => 'structure',
 			'id' => 'wrapper',
-			'name' => __('Wrapper', 'upfront'),
+			'name' => __('Container', 'upfront'),
 			'selector' => 'div.wrapper',
 			'properties' => array('fonts', 'background', 'borders', 'padding', 'corners', 'box-shadow', 'sizes', 'advanced', 'transition', 'outlines', 'animation'),
 			'states' => array(

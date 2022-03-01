@@ -524,15 +524,15 @@
 						),
 						array(
 							'type' => 'checkbox',
-							'label' => __('Versteckte Wrapper im Designmodus anzeigen', 'upfront'),
+							'label' => __('Versteckte Container im Designmodus anzeigen', 'upfront'),
 							'checkboxes' => array(
 								array(
 									'id' => 'show-hidden-wrappers-on-design-mode',
-									'label' => __('Versteckte Wrapper im Designmodus anzeigen', 'upfront'),
+									'label' => __('Versteckte Container im Designmodus anzeigen', 'upfront'),
 									'checked' => UpFrontOption::get('show-hidden-wrappers-on-design-mode', false, false)
 								)
 							),
-							'description' => __('Versteckte Wrapper im Designmodus anzeigen. Wenn Du einen Haltepunkt konfigurierst, um den Wrapper auszublenden, fordert diese Option Visual Editor auf, den zu gestaltenden Wrapper sichtbar zu lassen.', 'upfront')
+							'description' => __('Versteckte Container im Designmodus anzeigen. Wenn Du einen Haltepunkt konfigurierst, um den Container auszublenden, fordert diese Option Visual Editor auf, den zu gestaltenden Container sichtbar zu lassen.', 'upfront')
 						)
 					);
 

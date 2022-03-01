@@ -174,7 +174,7 @@ class UpFrontOnePageNavBlockOptions extends UpFrontBlockOptionsAPI {
 						array(
 							'type' => 'select',
 							'name' => 'wrapper',
-							'label' => __('Wrapper', 'upfront'),
+							'label' => __('Container', 'upfront'),
 							'options' => 'get_wrappers_lists()',
 						),
 						array(
@@ -203,7 +203,7 @@ class UpFrontOnePageNavBlockOptions extends UpFrontBlockOptionsAPI {
 	function get_wrappers_lists() {
 
 		$wrappers 	= UpFrontWrappersData::get_all_wrappers();
-		$options 	= array('' => '&ndash; Wähle einen Wrapper &ndash;');
+		$options 	= array('' => '&ndash; Wähle einen Container &ndash;');
 
 		//If there are no wrappers to mirror, then just return the Do Not Mirror option.
 		if ( empty($wrappers) || !is_array($wrappers) )
@@ -221,7 +221,7 @@ class UpFrontOnePageNavBlockOptions extends UpFrontBlockOptionsAPI {
 			
 			$wrapper_alias = upfront_get('alias', $wrapper['settings']) ? ' &ndash; ' . upfront_get('alias', $wrapper['settings']) : null;
 
-			/* Build info that shows if wrapper is fixed or fluid since a wrapper may not have alias and that can be confusing if it just says "Wrapper - Some Layout" over and over */
+			/* Build info that shows if wrapper is fixed or fluid since a wrapper may not have alias and that can be confusing if it just says "Container - Some Layout" over and over */
 			$wrapper_info = array();
 
 			if ( upfront_fix_data_type($wrapper['settings']['fluid']) )
@@ -237,7 +237,7 @@ class UpFrontOnePageNavBlockOptions extends UpFrontBlockOptionsAPI {
 			}
 
 			//Get alias if it exists, otherwise use the default name
-			$options[$layout_name][$wrapper_id] = 'Wrapper' . $wrapper_alias . $wrapper_info_str;
+			$options[$layout_name][$wrapper_id] = 'Container' . $wrapper_alias . $wrapper_info_str;
 
 		}
 

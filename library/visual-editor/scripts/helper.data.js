@@ -73,7 +73,7 @@ define(['underscore'], function(_) {
 
 			return input;
 
-			/* Wrapper Option */
+			/* Container Option */
 		} else if ( typeof panelArgs.wrapper != 'undefined' && panelArgs.wrapper ) {
 
 			dataSetWrapperOption(panelArgs.wrapper.id, optionID, value);

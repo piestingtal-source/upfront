@@ -22,7 +22,7 @@ define(['jquery', 'helper.history', 'helper.data'], function($, history) {
             this.contents = $(this.iframe).contents();
             this.document = $(this.iframe).contents();
 
-            /* Populate Grid Options from the Wrapper Settings.  This is primarily used for generating the CSS for the Grid so the right ratios and percentages can be made */
+            /* Populate Grid Options from the Container Settings.  This is primarily used for generating the CSS for the Grid so the right ratios and percentages can be made */
             this.options.useIndependentGrid = this.wrapper.data('wrapper-settings')['use-independent-grid'];
 
             this.options.columns = this.wrapper.data('wrapper-settings')['columns'] ? this.wrapper.data('wrapper-settings')['columns'] : UpFront.defaultGridColumnCount;

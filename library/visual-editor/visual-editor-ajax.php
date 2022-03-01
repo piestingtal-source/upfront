@@ -50,7 +50,7 @@ class UpFrontVisualEditorAJAX {
 
 			UpFrontLayoutOption::delete_by_template($skin_to_delete);
 
-		/* Löscht Blöcke und Wrapper */
+		/* Löscht Blöcke und Container */
 			UpFrontBlocksData::delete_by_template($skin_to_delete);
 			UpFrontWrappersData::delete_by_template($skin_to_delete);
 
@@ -430,7 +430,7 @@ class UpFrontVisualEditorAJAX {
 	}
 
 
-	/* Wrapper-Methoden */
+	/* Container-Methoden */
 	public static function method_load_wrapper_options() {
 
 		$layout_id = upfront_post('layout');
@@ -483,7 +483,7 @@ class UpFrontVisualEditorAJAX {
 
 		$layout = upfront_post('layout_to_revert');
 
-		//Lösche Wrapper, Blöcke und Designeinstellungen
+		//Lösche Container, Blöcke und Designeinstellungen
 		UpFrontLayout::delete_layout($layout);
 
 		do_action('upfront_visual_editor_reset_layout');
@@ -633,7 +633,7 @@ class UpFrontVisualEditorAJAX {
 
 			unset($templates[$id]);
 
-			//Lösche Blöcke, Wrapper und DE-Einstellungen für die aktuelle Skin
+			//Lösche Blöcke, Container und DE-Einstellungen für die aktuelle Skin
 			UpFrontLayout::delete_layout('template-' . $id);
 
 			//Vorlage aus Vorlagenliste löschen
@@ -925,7 +925,7 @@ class UpFrontVisualEditorAJAX {
 
 			}
 
-		/* Portabilität der Wrapper-Einstellungen */
+		/* Portabilität der Container-Einstellungen */
 			public static function method_export_wrapper_settings() {
 
 				UpFront::load('data/data-portability');

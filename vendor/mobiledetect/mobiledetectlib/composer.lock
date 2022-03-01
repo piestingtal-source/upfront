@@ -398,7 +398,7 @@
                 "name": "Sebastian Bergmann",
                 "email": "sebastian@phpunit.de"
             }],
-            "description": "Wrapper around PHP's tokenizer extension.",
+            "description": "Container around PHP's tokenizer extension.",
             "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
             "keywords": [
                 "tokenizer"

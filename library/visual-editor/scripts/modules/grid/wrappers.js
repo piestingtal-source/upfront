@@ -2,7 +2,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
     setupWrapperSortables = function() {
 
-        /* Wrapper wrapper-drag-handle tooltips */
+        /* Container wrapper-drag-handle tooltips */
 
         $i('#whitewrap div.wrapper-drag-handle, #whitewrap div.wrapper-options').qtip({
             style: {
@@ -21,7 +21,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
             }
         });
 
-        /* Wrapper Sorting */
+        /* Container Sorting */
         return $i('#whitewrap').sortable({
             items: 'div.wrapper',
             handle: 'div.wrapper-drag-handle',
@@ -314,7 +314,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                 var wrapper = $(event.currentTarget);
                 var wrapperID = getWrapperID(wrapper);
 
-                return 'Wrapper';
+                return 'Container';
 
             },
             contentsCallback: function(event) {
@@ -323,17 +323,17 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                 var wrapper = $(event.currentTarget);
                 var wrapperID = getWrapperID(wrapper);
 
-                /* Wrapper options */
-                $('<li class="context-menu-wrapper-options"><span>Öffne Wrapper-Optionen</span></li>').appendTo(contextMenu).on('click', function() {
+                /* Container options */
+                $('<li class="context-menu-wrapper-options"><span>Öffne Container-Optionen</span></li>').appendTo(contextMenu).on('click', function() {
 
                     openWrapperOptions(wrapperID);
 
                 });
 
-                /* Wrapper type changing */
+                /* Container type changing */
                 if (wrapper.hasClass('wrapper-fluid') && UpFront.mode == 'grid') {
 
-                    $('<li class="context-menu-wrapper-to-fixed"><span>Ändere Wrapper zu Fest</span></li>').appendTo(contextMenu).find('span').on('click', function() {
+                    $('<li class="context-menu-wrapper-to-fixed"><span>Fester Container</span></li>').appendTo(contextMenu).find('span').on('click', function() {
 
                         wrapper.removeClass('wrapper-fluid');
                         wrapper.removeClass('wrapper-fluid-grid');
@@ -386,7 +386,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
                 } else if (wrapper.hasClass('wrapper-fixed') && UpFront.mode == 'grid') {
 
-                    $('<li class="context-menu-wrapper-to-fluid"><span>Wechsel Wrapper zu Flüssig</span></li>').appendTo(contextMenu).on('click', function() {
+                    $('<li class="context-menu-wrapper-to-fluid"><span>Fließender Container</span></li>').appendTo(contextMenu).on('click', function() {
 
                         wrapper.removeClass('wrapper-fixed');
 
@@ -405,10 +405,10 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                 }
 
 
-                /* Wrapper Alias */
-                $('<li class="context-menu-set-alias"><span>Lege den Wrapper-Alias fest</span></li>').appendTo(contextMenu).on('click', function() {
+                /* Container Alias */
+                $('<li class="context-menu-set-alias"><span>Lege den Container-Alias fest</span></li>').appendTo(contextMenu).on('click', function() {
 
-                    var wrapperAlias = prompt('Bitte gib den gewünschten Wrapper-Alias ein.', wrapper.data('alias'));
+                    var wrapperAlias = prompt('Bitte gib den gewünschten Container-Alias ein.', wrapper.data('alias'));
 
                     if (!wrapperAlias)
                         return;
@@ -418,8 +418,8 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
                 });
 
-                /* Duplicate Wrapper */
-                $('<li class="context-menu-duplicate-wrapper"><span>Duplizierter Wrapper</span></li>').appendTo(contextMenu).on('click', function() {
+                /* Duplicate Container */
+                $('<li class="context-menu-duplicate-wrapper"><span>Duplizierter Container</span></li>').appendTo(contextMenu).on('click', function() {
 
                     var orgWrapper = wrapper.clone();
 
@@ -430,7 +430,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                     if (typeof orgWrapper.data('wrapper-settings') == "undefined" || isSavingAllowed === true) {
                         showNotification({
                             id: 'wrapper-notification',
-                            message: 'Bitte speichere und aktualisiere diese, bevor Du diesen Wrapper duplizierst.',
+                            message: 'Bitte speichere und aktualisiere diese, bevor Du diesen Container duplizierst.',
                             closable: true,
                             closeTimer: 5000
                         });
@@ -441,8 +441,8 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
                 });
 
-                /* Duplicate Wrapper and Blocks*/
-                $('<li class="context-menu-duplicate-wrapper-and-blocks"><span>Dupliziere Wrapper und Blöcke</span></li>').appendTo(contextMenu).on('click', function() {
+                /* Duplicate Container and Blocks*/
+                $('<li class="context-menu-duplicate-wrapper-and-blocks"><span>Dupliziere Container und Blöcke</span></li>').appendTo(contextMenu).on('click', function() {
 
 
                     var orgWrapper = wrapper.clone();
@@ -454,7 +454,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                     if (typeof orgWrapper.data('wrapper-settings') == "undefined" || isSavingAllowed === true) {
                         showNotification({
                             id: 'wrapper-notification',
-                            message: 'Bitte speichere und aktualisiere diese, bevor Du diesen Wrapper duplizierst.',
+                            message: 'Bitte speichere und aktualisiere diese, bevor Du diesen Container duplizierst.',
                             closable: true,
                             closeTimer: 5000
                         });
@@ -485,7 +485,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
                 /* Delete wrapper.  Do not allow it to be deleted if it's the last one. */
                 if ($i('.wrapper:visible').length >= 2 && UpFront.mode == 'grid') {
 
-                    $('<li class="context-menu-wrapper-delete"><span>Wrapper löschen</span></li>').appendTo(contextMenu).on('click', function() {
+                    $('<li class="context-menu-wrapper-delete"><span>Container löschen</span></li>').appendTo(contextMenu).on('click', function() {
 
                         deleteWrapper(wrapperID);
 
@@ -500,7 +500,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
     bindWrapperButtons = function() {
 
-        /* Add Wrapper Buttons */
+        /* Add Container Buttons */
         $i('body').delegate('.add-wrapper-button-fixed', 'click', function() {
 
             return addWrapper($(this).parents('.add-wrapper-buttons').data('position'), {
@@ -525,7 +525,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
         });
 
-        /* Wrapper Buttons */
+        /* Container Buttons */
         $i('body').delegate('.wrapper-buttons .wrapper-options', 'click', function() {
 
             return openWrapperOptions(getWrapperID($(this).closest('.wrapper')));
@@ -580,9 +580,9 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
         wrapper.find('.grid-container').append('\
 						<div class="wrapper-mirror-notice">\
 							<div>\
-							<h2>Wrapper gespiegelt</h2>\
-							<p>Dieser Wrapper spiegelt Blöcke von einem anderen Wrapper.</p>\
-							<small>Die Spiegelung kann über die Wrapper-Optionen im Kontextmenü deaktiviert werden</small>\
+							<h2>Container gespiegelt</h2>\
+							<p>Dieser Container spiegelt Blöcke von einem anderen Container.</p>\
+							<small>Die Spiegelung kann über die Container-Optionen im Kontextmenü deaktiviert werden</small>\
 							</div>\
 						</div><!-- .wrapper-mirror-notice -->\
 					');
@@ -673,7 +673,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
 
         var wrapper = $i('.wrapper[data-id="' + wrapperID + '"]');
 
-        if (wrapper.length && (force || confirm('Möchtest Du diesen Wrapper wirklich entfernen? Alle Blöcke im Wrapper werden ebenfalls gelöscht.'))) {
+        if (wrapper.length && (force || confirm('Möchtest Du diesen Container wirklich entfernen? Alle Blöcke im Container werden ebenfalls gelöscht.'))) {
 
             dataDeleteWrapper(wrapperID);
 
@@ -724,7 +724,7 @@ define(['util.custommouse', 'qtip', 'helper.data', 'modules/grid/wrapper-inputs'
             var marginPosition = handle.hasClass('wrapper-top-margin-handle') ? 'Top' : 'Bottom';
 
             var currentMargin = '<span style="opacity: .8;">' + marginPosition + ' Margin:</span> ' + wrapper.css('margin' + marginPosition);
-            var tooltipHelp = !handle.data('dragging') ? 'Ziehen zum ändern der Wrapper <strong>' + marginPosition.toLowerCase() + ' margin</strong><br />' : '';
+            var tooltipHelp = !handle.data('dragging') ? 'Ziehen zum ändern der Container <strong>' + marginPosition.toLowerCase() + ' margin</strong><br />' : '';
 
             return tooltipHelp + currentMargin;
 

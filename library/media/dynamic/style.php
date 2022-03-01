@@ -57,7 +57,7 @@ class UpFrontDynamicStyle {
 
 					$element['instances'][$target_wrapper] = array(
 						'id' => $target_wrapper,
-						'name' => 'Wrapper: '. $alias,
+						'name' => 'Container: '. $alias,
 						'selector' => '#wrapper-'.$target_wrapper_data['id'].', div#whitewrap div.wrapper-mirroring-'.$target_wrapper_data['id'].'',
 						'layout' => $target_wrapper_data['layout'],
 						'state-of' => '',
@@ -180,7 +180,7 @@ class UpFrontDynamicStyle {
 
 		$return = '';
 
-		/* Default Wrapper Margins */
+		/* Default Container Margins */
 			if ( upfront_get('file') == 've-iframe-grid-dynamic' && upfront_get('visual-editor-open') ) {
 
 				$return .= UpFrontElementProperties::output_css('div.wrapper', array(
@@ -216,10 +216,10 @@ class UpFrontDynamicStyle {
 				$wrapper_selector = 'div#wrapper-' . UpFrontWrappers::format_wrapper_id($wrapper_id);
 			}
 
-			/* Fixed Wrapper */
+			/* Fixed Container */
 				if ( !upfront_get('fluid', $wrapper_settings, false, true) ) {
 
-					/* Wrapper */
+					/* Container */
 						$return .= $wrapper_selector . ' {
 							width: ' . $wrapper_grid_width . 'px;
 						}';
@@ -237,7 +237,7 @@ class UpFrontDynamicStyle {
 						if ( upfront_get('file') != 've-iframe-grid-dynamic' || !upfront_get('visual-editor-open') )
 							$return .= UpFrontResponsiveGrid::is_enabled() ? self::responsive_grid($wrapper) : self::fixed_grid($wrapper);
 
-			/* Fluid Wrapper */
+			/* Fluid Container */
 				} else {
 
 					/* Gitter Container */
@@ -343,7 +343,7 @@ class UpFrontDynamicStyle {
 									$return .= $wrapper_selector . ':before {
 										background-image: url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1"><line class="x-line" x1="0" y1="0" x2="100%" y2="100%" stroke="black" /><line class="x-line" x1="0" y1="100%" x2="100%" y2="0" stroke="black"/></svg>\');
 									    padding-top: 15px;
-									    content: "Hidden Wrapper";
+									    content: "Versteckter Container";
 									    position: absolute;
 									    left: 0;
 									    right: 0;

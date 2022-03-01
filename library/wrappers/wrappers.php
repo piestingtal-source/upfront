@@ -152,11 +152,11 @@ class UpFrontWrappers {
 		$mirroring_wrappers_no_style = array();
 		foreach ( $all_wrappers as $wrapper_id => $wrapper_options ) {
 
-			/* Registriere NICHT die Standard-Wrapper-Instanz */
+			/* Registriere NICHT die Standard-Container-Instanz */
 			if ( $wrapper_id == 'default' )
 				continue;
 
-			/* Registriert keine Instanz für den gespiegelten Wrapper */
+			/* Registriert keine Instanz für den gespiegelten Container */
 			if ( UpFrontWrappersData::is_wrapper_mirrored($wrapper_options) ){
 				if( !empty($wrapper_options['settings']['do-not-mirror-wrapper-styles']) && $wrapper_options['settings']['do-not-mirror-wrapper-styles'] == true){
 
@@ -169,7 +169,7 @@ class UpFrontWrappers {
 			$wrapper_id_for_selector    = UpFrontWrappersData::get_legacy_id( $wrapper_options );
 			$wrapper_id_for_selector    = self::format_wrapper_id( $wrapper_id_for_selector);
 
-			$wrapper_name = upfront_get('alias', upfront_get('settings', $wrapper_options, array())) ? 'Wrapper: ' . upfront_get( 'alias', upfront_get( 'settings', $wrapper_options, array() ) ) : 'Wrapper (unbenannt)';
+			$wrapper_name = upfront_get('alias', upfront_get('settings', $wrapper_options, array())) ? 'Container: ' . upfront_get( 'alias', upfront_get( 'settings', $wrapper_options, array() ) ) : 'Container (unbenannt)';
 
 
 			if( empty($mirroring_wrappers_no_style[$wrapper_id_for_selector]) ){
@@ -246,7 +246,7 @@ class UpFrontWrappers {
 		if ( !is_array($wrapper) )
 			return false;
 
-		/* Wenn der Wrapper gespiegelt ist, verwende die Einstellungen für das Gitter */
+		/* Wenn der Container gespiegelt ist, verwende die Einstellungen für das Gitter */
 		if ( $potential_wrapper_mirror = UpFrontWrappersData::get_wrapper_mirror($wrapper) )
 			$wrapper = $potential_wrapper_mirror;
 
@@ -280,7 +280,7 @@ class UpFrontWrappers {
 		if ( ! $wrappers )
 			return $wrappers;
 
-		/* Führt das Einstellungsarray mit jedem Wrapper zusammen, sodass es eine einzige Dimension aufweist */
+		/* Führt das Einstellungsarray mit jedem Container zusammen, sodass es eine einzige Dimension aufweist */
 		foreach ( $wrappers as $wrapper_id => $wrapper ) {
 
 			$wrappers[ $wrapper_id ]['mirror-wrapper'] = upfront_get( 'mirror_id', $wrapper );

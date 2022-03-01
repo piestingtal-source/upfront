@@ -53,7 +53,7 @@ function upfront_maybe_unserialize($string) {
 
 
 /**
- * Wrapper of maybe_serialize() but does an is_serialized check first so it's not double serialized
+ * Container of maybe_serialize() but does an is_serialized check first so it's not double serialized
  */
 function upfront_maybe_serialize($data) {
 

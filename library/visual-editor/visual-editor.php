@@ -163,7 +163,7 @@ class UpFrontVisualEditor {
 
 		try {
 
-			/* Füge Wrapper hinzu*/
+			/* Füge Container hinzu*/
 			if ( $wrappers ) {
 
 				foreach ( $wrappers as $id => $methods ) {
@@ -231,7 +231,7 @@ class UpFrontVisualEditor {
 
 								$settings = isset($blocks[$id]['settings']) ? $blocks[$id]['settings'] : array();
 
-								/* Überprüft ob die Wrapper-ID für den Block temporär ist und ob sie die tatsächliche Block-ID erhält */
+								/* Überprüft ob die Container-ID für den Block temporär ist und ob sie die tatsächliche Block-ID erhält */
 								if ( isset($output['wrapper-id-mapping']) && $added_wrapper_id = upfront_get(UpFrontWrappers::format_wrapper_id($blocks[$id]['wrapper']), $output['wrapper-id-mapping']) ) {
 									$blocks[$id]['wrapper'] = $added_wrapper_id;
 								}
@@ -348,7 +348,7 @@ class UpFrontVisualEditor {
 								if ( isset($blocks[$id]['new']) )
 									continue 2;
 
-								/* Überprüft ob die Wrapper-ID für den Block temporär ist und ob es sich um die echte Wrapper-ID handelt */
+								/* Überprüft ob die Container-ID für den Block temporär ist und ob es sich um die echte Container-ID handelt */
 								if ( isset($output['wrapper-id-mapping']) && upfront_get($value, $output['wrapper-id-mapping']) )
 									$value = upfront_get($value, $output['wrapper-id-mapping']);
 
@@ -399,7 +399,7 @@ class UpFrontVisualEditor {
 			/* Ende Blöcke */
 
 
-			/* Mach alles andere mit Wrappern. Grund dafür ist, dass die Wrapper-IDs zum Hinzufügen von Blöcken eingerichtet werden müssen. Wenn wir jedoch einen Block aus einem Wrapper verschieben und diesen Wrapper löschen, möchten wir nicht, dass diese Blöcke gelöscht werden. */
+			/* Mach alles andere mit Wrappern. Grund dafür ist, dass die Container-IDs zum Hinzufügen von Blöcken eingerichtet werden müssen. Wenn wir jedoch einen Block aus einem Container verschieben und diesen Container löschen, möchten wir nicht, dass diese Blöcke gelöscht werden. */
 			if ( $wrappers ) {
 
 				foreach ( $wrappers as $id => $methods ) {
@@ -435,10 +435,10 @@ class UpFrontVisualEditor {
 								if ( isset($wrappers[$id]['new']) )
 									continue 2;
 
-								//Holt sich den Wrapper aus dem Layout, damit wir die Einstellungen zusammenführen können
+								//Holt sich den Container aus dem Layout, damit wir die Einstellungen zusammenführen können
 								$wrapper = UpFrontWrappersData::get_wrapper($id);
 
-								//Wenn es keinen Wrapper gibt, können wir nichts tun.
+								//Wenn es keinen Container gibt, können wir nichts tun.
 								if ( !$wrapper )
 									continue 2;
 
@@ -459,7 +459,7 @@ class UpFrontVisualEditor {
 				}
 
 			}
-			/* Beende alle anderen Wrapper (Löschen und Optionen) */
+			/* Beende alle anderen Container (Löschen und Optionen) */
 
 
 
@@ -573,7 +573,7 @@ class UpFrontVisualEditor {
 
 								}
 
-								/* Wenn eine Wrapper-ID-Zuordnung vorhanden ist, gehe genauso vor wie bei der Block-ID-Zuordnung */
+								/* Wenn eine Container-ID-Zuordnung vorhanden ist, gehe genauso vor wie bei der Block-ID-Zuordnung */
 								if ( isset( $output['wrapper-id-mapping'] ) && count( $output['wrapper-id-mapping'] ) ) {
 
 									foreach ( $output['wrapper-id-mapping'] as $old_wrapper_id => $new_wrapper_id ) {

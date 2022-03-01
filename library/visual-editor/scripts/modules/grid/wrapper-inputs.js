@@ -14,7 +14,7 @@ wrapperOptionCallbackIndependentGrid = function(input, value) {
     /* Update wrapper object and the guides */
     wrapperGridObject.options.useIndependentGrid = value;
 
-    /* Finalize: Update the Wrapper/Grid CSS and reset draggable/resizable, etc */
+    /* Finalize: Update the Container/Grid CSS and reset draggable/resizable, etc */
     wrapperGridObject.updateGridCSS();
 
 }
@@ -33,7 +33,7 @@ wrapperOptionCallbackColumnCount = function(input, value) {
 
         showNotification({
             id: 'wrapper-column-count-change-error-',
-            message: "Dieser Wrapper muss leer sein, bevor Du die Anzahl der Spalten ändern kannst.\n\nZiehe die Blöcke entweder auf einen anderen Wrapper oder lösche sie, wenn sie nicht mehr benötigt werden.",
+            message: "Dieser Container muss leer sein, bevor Du die Anzahl der Spalten ändern kannst.\n\nZiehe die Blöcke entweder auf einen anderen Container oder lösche sie, wenn sie nicht mehr benötigt werden.",
             closeTimer: 10000,
             closable: true,
             error: true
@@ -50,7 +50,7 @@ wrapperOptionCallbackColumnCount = function(input, value) {
 
         wrapperGridObject.addColumnGuides();
 
-        /* Finalize: Update the Wrapper/Grid CSS and reset draggable/resizable, etc */
+        /* Finalize: Update the Container/Grid CSS and reset draggable/resizable, etc */
         wrapperGridObject.updateGridCSS();
     }
 
@@ -71,7 +71,7 @@ wrapperOptionCallbackColumnWidth = function(input, value) {
     /* Update wrapper object and the guides */
     wrapperGridObject.options.columnWidth = value;
 
-    /* Finalize: Update the Wrapper/Grid CSS and reset draggable/resizable, etc */
+    /* Finalize: Update the Container/Grid CSS and reset draggable/resizable, etc */
     wrapperGridObject.updateGridCSS();
 
 }
@@ -91,12 +91,12 @@ wrapperOptionCallbackGutterWidth = function(input, value) {
     /* Update wrapper object and the guides */
     wrapperGridObject.options.gutterWidth = value;
 
-    /* Finalize: Update the Wrapper/Grid CSS and reset draggable/resizable, etc */
+    /* Finalize: Update the Container/Grid CSS and reset draggable/resizable, etc */
     wrapperGridObject.updateGridCSS();
 }
 
 
-/* Wrapper Margin Inputs */
+/* Container Margin Inputs */
 wrapperOptionCallbackMarginTop = function(input, value) {
 
     var wrapperID = input.parents("[data-panel-args]").data("panel-args").wrapper.id.replace('wrapper-', '');
@@ -170,7 +170,7 @@ wrapperMarginFeedbackCreator = function(wrapper, topOrBottom) {
 
 }
 
-/* Default Wrapper Options */
+/* Default Container Options */
 updateGridWidthInput = function(context) {
 
         var columns = $(context).find('input[name="columns"]').val();

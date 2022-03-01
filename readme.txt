@@ -264,7 +264,7 @@ Visual Editor Fixes
 - Mobile preview fix
 Footer block update: Now Custom Copyright support %Y% to show current year
 Admin support notice
-New option to prevent mirror Wrapper styles
+New option to prevent mirror Container styles
 
 
 = 0.3.1 =

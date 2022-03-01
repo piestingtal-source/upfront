@@ -1976,7 +1976,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		}
 
 		/**
-		 * Wrapper around the core WP get_plugins function, making sure it's actually available.
+		 * Container around the core WP get_plugins function, making sure it's actually available.
 		 *
 		 * @since 2.5.0
 		 *

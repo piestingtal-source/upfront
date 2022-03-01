@@ -23,14 +23,14 @@ class UpFrontVisualEditorIframeGrid {
 
 				echo '<div class="wrapper-mirror-notice">
 						<div>
-						<h2>' . __('Wrapper gespiegelt', 'upfront') . '</h2>
+						<h2>' . __('Container gespiegelt', 'upfront') . '</h2>
 						<p>' . 
 						sprintf( 
-							__('Dieser Wrapper spiegelt die Blöcke in einem Wrapper <span class="wrapper-mirror-notice-alias">%1$s</span> <span class="wrapper-mirror-notice-layout">von "%1$s" layout</span>', 'upfront'), 
+							__('Dieser Container spiegelt die Blöcke in einem Container <span class="wrapper-mirror-notice-alias">%1$s</span> <span class="wrapper-mirror-notice-layout">von "%1$s" layout</span>', 'upfront'), 
 							$mirror_wrapper_alias, 
 							$mirror_wrapper_layout) 
 						. '</p>
-						<small>' . __('Die Spiegelung kann über die Wrapper-Optionen im Kontextmenü deaktiviert werden', 'upfront') . '</small>
+						<small>' . __('Die Spiegelung kann über die Container-Optionen im Kontextmenü deaktiviert werden', 'upfront') . '</small>
 						</div>
 					</div><!-- .wrapper-mirror-notice -->';
 			/* End mirrored wrapper notice */
@@ -112,7 +112,7 @@ class UpFrontVisualEditorIframeGrid {
 
 			echo '<div class="wrapper-handle wrapper-top-margin-handle wrapper-margin-handle" title="' . __('Ziehen um den oberen Rand des Wrappers zu ändern', 'upfront') . '"><span></span><span></span><span></span></div>';
 
-			echo '<div class="wrapper-handle wrapper-drag-handle" title="' . __('Ziehen um die Wrapper-Reihenfolge zu ändern', 'upfront') . '"><span></span><span></span><span></span></div>';
+			echo '<div class="wrapper-handle wrapper-drag-handle" title="' . __('Ziehen um die Container-Reihenfolge zu ändern', 'upfront') . '"><span></span><span></span><span></span></div>';
 
 			echo '<div class="wrapper-handle wrapper-bottom-margin-handle wrapper-margin-handle" title="' . __('Ziehen um den unteren Rand des Wrappers zu ändern', 'upfront') . '"><span></span><span></span><span></span></div>';
 
