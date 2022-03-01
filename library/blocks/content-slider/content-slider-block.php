@@ -310,7 +310,7 @@ class UpFrontContentSliderBlock extends UpFrontBlockAPI {
 			$navText_prev	= ( !empty($block['settings']['nav-text-prev']) ) ? $block['settings']['nav-text-prev']: '<';
 			$carouselParams .= 'navText:["'.$navText_prev.'","'.$navText_next.'"],';
 		}else{
-			$carouselParams .= 'navText:["Prev","Next"],';			
+			$carouselParams .= 'navText:["Zurück","Weiter"],';			
 		}
 
 		// navElement
@@ -704,7 +704,7 @@ class UpFrontContentSliderBlockOptions extends UpFrontBlockOptionsAPI {
 				'type' 		=> 'text',
 				'default' 	=> null,
 				'name' 		=> 'nav-text-next',
-				'label' 	=> '"Next" text',
+				'label' 	=> '"Weiter" text',
 				'tooltip' 	=> 'HTML allowed.',
 			),
 
@@ -712,7 +712,7 @@ class UpFrontContentSliderBlockOptions extends UpFrontBlockOptionsAPI {
 				'type' 		=> 'text',
 				'default' 	=> null,
 				'name' 		=> 'nav-text-prev',
-				'label' 	=> '"Prev" text',
+				'label' 	=> '"Zurück" text',
 				'tooltip' 	=> 'HTML allowed.',
 			),
 
