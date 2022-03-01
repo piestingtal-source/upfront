@@ -188,7 +188,7 @@ class UpFrontVideoBlock extends UpFrontBlockAPI {
 				$videoHTML .= '<source src="' . upfront_format_url_ssl($video_webm) . '" type="video/webm">';
 			}
 			if(parent::get_setting($block, 'video-custom-url')) {
-				$videoHTML .= '<source src="' . padma_format_url_ssl($video_custom) . '">';
+				$videoHTML .= '<source src="' . upfront_format_url_ssl($video_custom) . '">';
 			}
 			$videoHTML .= 'Dein Browser unterstützt das Video-Tag nicht.';
 			$videoHTML .= '</video></div>';
