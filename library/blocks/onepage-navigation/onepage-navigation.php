@@ -205,7 +205,7 @@ class UpFrontOnePageNavBlockOptions extends UpFrontBlockOptionsAPI {
 		$wrappers 	= UpFrontWrappersData::get_all_wrappers();
 		$options 	= array('' => '&ndash; Wähle einen Container &ndash;');
 
-		//If there are no wrappers to mirror, then just return the Do Not Mirror option.
+		//If there are no wrappers to mirror, then just return the Nicht spiegeln option.
 		if ( empty($wrappers) || !is_array($wrappers) )
 			return $options;
 

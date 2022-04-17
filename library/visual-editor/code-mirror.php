@@ -158,7 +158,7 @@
 </style>
 </head>
 <body>
-	<a target="_blank" href="https://n3rds.work/docs/upfront-dokumentation/" class="how-to">How to?</a>
+	<a target="_blank" href="https://n3rds.work/docs/upfront-dokumentation/" class="how-to">Tastenkürzel?</a>
 	<textarea id="code" name="code" class="code" placeholder="Dein großartiges <?php echo $mode_text; ?> kommt hierher"></textarea>
 <?php
 foreach ($scripts as $key => $file) {

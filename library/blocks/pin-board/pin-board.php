@@ -165,10 +165,10 @@ if ( !class_exists('UpFrontPinBoardCoreBlock') ) {
 					$show_tags 			= parent::get_setting($block, 'show-tags', false);
 					$show_post_type		= parent::get_setting($block, 'show-post-type', false);
 					$show_datetime 		= parent::get_setting($block, 'show-datetime', false);
-					$datetime_verb 		= parent::get_setting($block, 'datetime-verb', 'Posted');
+					$datetime_verb 		= parent::get_setting($block, 'datetime-verb', 'Veröffentlicht');
 					$relative_times 	= parent::get_setting($block, 'relative-times', true);
 
-					//$entry_meta_above 	= $this->parse_meta(parent::get_setting('entry-meta-above', 'Posted on %date% by %author% &bull; %comments%'));
+					//$entry_meta_above 	= $this->parse_meta(parent::get_setting('entry-meta-above', 'Veröffentlicht am %date% von %author% &bull; %comments%'));
 
 
 				/* Content */
@@ -1384,7 +1384,7 @@ if ( !class_exists('UpFrontPinBoardCoreBlock') ) {
 							'type' 		=> 'text',
 							'name' 		=> 'datetime-verb',
 							'label' 	=> __('Meta: Posted Verb', 'upfront'),
-							'default' 	=> __('Posted', 'upfront'),
+							'default' 	=> __('Veröffentlicht', 'upfront'),
 							'tooltip'	=> __('The posted verb will be placed before the time.  For instance, you may want to use "Listed" for real estate rather than "Posted"', 'upfront')
 						),
 				),

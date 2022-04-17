@@ -76,6 +76,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
 == Changelog ==
 
+= 1.4.8 = 
+
+Offizielles Piestingtal.Source Release
+
 = 1.3.3 = 
 * Beta Version
 * Released: On dev

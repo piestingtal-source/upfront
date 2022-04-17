@@ -608,9 +608,9 @@ class UpFrontBlockOptionsAPI extends UpFrontVisualEditorPanelAPI {
 
 		$blocks = UpFrontBlocksData::get_blocks_by_type($block_type);
 
-		$options = array('' => '&ndash; '. __('Do Not Mirror', 'upfront') . ' &ndash;');
+		$options = array('' => '&ndash; '. __('Nicht spiegeln', 'upfront') . ' &ndash;');
 
-		//If there are no blocks, then just return the Do Not Mirror option.
+		//If there are no blocks, then just return the Nicht spiegeln option.
 		if ( !isset($blocks) || !is_array($blocks) )
 			return $options;
 

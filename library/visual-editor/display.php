@@ -455,7 +455,7 @@ class UpFrontVisualEditorDisplay {
 						echo '<li id="tools-grid-manager"><span>' . __('Gittermanager', 'upfront') . '</span></li>';
 
 					if ( UpFrontCompiler::can_cache() )
-						echo '<li id="tools-clear-cache"><span>' . __('Cache leeren', 'upfront') . ' ' . (!UpFrontCompiler::caching_enabled() ? ' (' . __('Disabled', 'upfront') . ')' : '') . '</span></li>';
+						echo '<li id="tools-clear-cache"><span>' . __('Cache leeren', 'upfront') . ' ' . (!UpFrontCompiler::caching_enabled() ? ' (' . __('Deaktiviert', 'upfront') . ')' : '') . '</span></li>';
 
 					echo '<li id="tools-tour"><span>Tour</span></li>
 				</ul>

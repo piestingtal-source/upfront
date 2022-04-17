@@ -1435,7 +1435,7 @@ define(['jquery', 'underscore', 'helper.contentEditor', 'deps/interact', 'util.n
                     $(this).find('.customize-property').fadeOut(150);
                     $(this).removeClass('uncustomized-property');
                     $(this).addClass('customized-property-by-user');
-                    $(this).attr('title', 'You have customized this property.');
+                    $(this).attr('title', 'Du hast diese Eigenschaft angepasst.');
 
                     var hidden = $(this).find('input.property-hidden-input');
 
@@ -1455,7 +1455,7 @@ define(['jquery', 'underscore', 'helper.contentEditor', 'deps/interact', 'util.n
             /* Uncustomize Button */
             $('.design-editor-options-container').delegate('span.uncustomize-property', 'click', function() {
 
-                if (!confirm('Are you sure you wish to delete this customization?'))
+                if (!confirm('Möchtest Du diese Anpassung wirklich löschen?'))
                     return false;
 
                 var property = $(this).parents('li').first();
@@ -1668,7 +1668,7 @@ define(['jquery', 'underscore', 'helper.contentEditor', 'deps/interact', 'util.n
 
     designEditorInputImageUploadDelete = function(event) {
 
-        if (!confirm('Are you sure you wish to remove this image?')) {
+        if (!confirm('Möchtest Du dieses Bild wirklich entfernen?')) {
             return false;
         }
 

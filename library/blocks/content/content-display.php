@@ -1218,9 +1218,9 @@ class UpFrontContentBlockDisplay {
 					$comments_number = (int)get_comments_number($post->ID);
 
 					if ( $comments_number === 0 ) 
-						$comments_format = stripslashes($this->get_setting('comment-format-0', '%num% Comments'));
+						$comments_format = stripslashes($this->get_setting('comment-format-0', '%num% Kommentare'));
 					elseif ( $comments_number == 1 ) 
-						$comments_format = stripslashes($this->get_setting('comment-format-1', '%num% Comment'));
+						$comments_format = stripslashes($this->get_setting('comment-format-1', '%num% Kommentar'));
 					elseif ( $comments_number > 1 ) 
 						$comments_format = stripslashes($this->get_setting('comment-format', '%num% Comments'));
 
