@@ -8,8 +8,8 @@
 
 		<div id="layout-selector-tabs">
 			<ul class="tabs">
-				<li><a href="#layout-selector-pages-container">Pages</a></li>
-				<li><a href="#layout-selector-templates-container">Shared Layouts</a></li>
+				<li><a href="#layout-selector-pages-container">Seiten</a></li>
+				<li><a href="#layout-selector-templates-container">Freigegebene Layouts</a></li>
 			</ul>
 		</div><!-- #layout-selector-tabs -->
 
@@ -32,12 +32,12 @@
 
 						<span class="status status-template" data-bind="attr: {'data-template-id': template},text: templateName;"></span>
 
-						<span class="status status-customized" data-bind="if: customized">Customized</span>
+						<span class="status status-customized" data-bind="if: customized">Angepasst</span>
 						<span class="status status-currently-editing" data-bind="if: id == $root.currentLayout()">Derzeit bearbeitet:</span>
 
-						<span class="remove-template button layout-selector-button" data-bind="if: template">Remove Shared Layout</span>
+						<span class="remove-template button layout-selector-button" data-bind="if: template">Freigegebenes Layout entfernen</span>
 
-						<span class="edit button button-blue layout-selector-button">Edit</span>
+						<span class="edit button button-blue layout-selector-button">Bearbeiten</span>
 						<span class="revert button layout-selector-button tooltip" title="Durch das Zurücksetzen eines Layouts werden alle seine Blöcke entfernt&lt;br /&gt;es erbt also die Blöcke eines übergeordneten Layouts.">Zurücksetzen</span>
 					</span>
 
@@ -59,8 +59,8 @@
 
 			<div id="layout-search-input-container" class="layout-selector-bottom-input">
 				<form>
-					<input type="search" placeholder="Type to Search..." value="" id="layout-search-input" pattern=".{3,}" class="allow-enter-key" title="Deine Suche muss 3 Zeichen oder länger sein." />
-					<span class="button" id="layout-search-submit">Search</span>
+					<input type="search" placeholder="Tippe um zu suchen..." value="" id="layout-search-input" pattern=".{3,}" class="allow-enter-key" title="Deine Suche muss 3 Zeichen oder länger sein." />
+					<span class="button" id="layout-search-submit">Suche</span>
 				</form>
 			</div>
 		</div><!-- #layout-selector-pages -->
@@ -73,13 +73,13 @@
 					<span class="layout layout-template" data-bind="attr: {'data-layout-id': id}">
 						<strong class="template-name" data-bind="text: name"></strong>
 
-						<span class="delete-template" title="Freigegebenes Layout löschen">Delete</span>
+						<span class="delete-template" title="Freigegebenes Layout löschen">Löschen</span>
 
 						<span class="status status-currently-editing" data-bind="if: id == $root.currentLayout()">Derzeit bearbeitet:</span>
 
-						<span class="rename-template button layout-selector-button">Rename</span>
-						<span class="assign-template button layout-selector-button">Use Layout</span>
-						<span class="edit button button-blue layout-selector-button">Edit</span>
+						<span class="rename-template button layout-selector-button">Umbenennen</span>
+						<span class="assign-template button layout-selector-button">Layout verwenden</span>
+						<span class="edit button button-blue layout-selector-button">Bearbeiten</span>
 					</span>
 				</li>
 			</script>
@@ -91,7 +91,7 @@
 
 			<div id="template-name-input-container" class="layout-selector-bottom-input">
 				<input type="text" placeholder="Name des freigegebenen Layouts" value="" id="template-name-input" />
-				<span class="button add-template" id="add-template">Add Shared Layout</span>
+				<span class="button add-template" id="add-template">Freigegebenes Layout hinzufügen</span>
 			</div>
 		</div><!-- #layout-selector-templates -->
 	</div><!-- #layout-selector-container -->

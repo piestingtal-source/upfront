@@ -176,7 +176,7 @@ class UpFrontDailymotionBlockOptions extends UpFrontBlockOptionsAPI {
 				'background' => array(
 					'name'    => 'background',
 					'type'    => 'text',
-					'label'   => __( 'Hintergrund', 'upfront' ),
+					'label'   => __( 'Background', 'upfront' ),
 					'default' => '#FFC300',
 					'tooltip' => __( 'HTML (HEX)-Farbe des Hintergrunds von Steuerelementelementen', 'upfront' ),
 				),

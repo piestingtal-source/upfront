@@ -9,10 +9,10 @@ class UpFrontGoogleFonts extends UpFrontWebFontProvider {
 
 
 	public $sorting_options = array(
-		'popularity' 	=> 'Popularity',
-		'trending' 		=> 'Trending',
-		'alpha' 		=> 'Alphabetically',
-		'date' 			=> 'Date Added',
+		'popularity' 	=> 'Popularität',
+		'trending' 		=> 'Im Trend',
+		'alpha' 		=> 'Alphabetisch',
+		'date' 			=> 'Datum hinzugefügt',
 		'style' 		=> 'Style'
 	);
 

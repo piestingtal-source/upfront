@@ -52,16 +52,16 @@ class UpFront {
 
 		/* Site URLs */
 		if ( ! defined( 'UPFRONT_SITE_URL' ) ) {
-			define( 'UPFRONT_SITE_URL', 'http://www.upfrontunlimited.com/' );
+			define( 'UPFRONT_SITE_URL', 'https://n3rds.work' );
 		}
 		if ( ! defined( 'UPFRONT_API_URL' ) ) {
-			define( 'UPFRONT_API_URL', 'https://api.upfrontunlimited.com/' );
+			define( 'UPFRONT_API_URL', 'https://api.padmaunlimited.com/' );
 		}
 		if ( ! defined( 'UPFRONT_CDN_URL' ) ) {
-			define( 'UPFRONT_CDN_URL', 'https://cdn.upfrontunlimited.com/' );
+			define( 'UPFRONT_CDN_URL', 'https://n3rds.work//wp-update-server/' );
 		}
 		if ( ! defined( 'UPFRONT_DASHBOARD_URL' ) ) {
-			define( 'UPFRONT_DASHBOARD_URL', 'https://dashboard.upfrontunlimited.com/' );
+			define( 'UPFRONT_DASHBOARD_URL', 'https://n3rds.work' );
 		}
 		if ( ! defined( 'UPFRONT_EXTEND_URL' ) ) {
 			define( 'UPFRONT_EXTEND_URL', UPFRONT_SITE_URL . 'extend' );

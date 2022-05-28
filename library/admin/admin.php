@@ -394,7 +394,7 @@ class UpFrontAdmin {
 			wp_localize_script('upfront_admin_templates', 'UpFront', array(
 
 				'ajaxURL' 			=> admin_url('admin-ajax.php'),
-				//'apiURL' 			=> UPFRONT_API_URL,
+				'apiURL' 			=> UPFRONT_API_URL,
 				'security' 			=> wp_create_nonce('upfront-visual-editor-ajax'),
 				'templates' 		=> UpFrontTemplates::get_all(),
 				'templateActive' 	=> UpFrontTemplates::get_active(),

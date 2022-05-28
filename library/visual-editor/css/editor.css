@@ -3717,7 +3717,7 @@ div.layout-selector-content li.layout-item span.layout-page span.layout-selector
 }
 
 div.layout-selector-content li.layout-item span.layout-template span.assign-template {
-    right: 60px
+    right: 90px
 }
 
 div.layout-selector-content li.layout-item span.layout-template span.delete-template {
@@ -4000,8 +4000,8 @@ div.content-selector-bottom-input input,
 div.layout-selector-bottom-input input {
     float: left;
     padding: 3px;
-    margin: 0 0 0 2px;
-    width: 150px
+    margin: 0 0 5px 2px;
+    width: 96%
 }
 
 input#content-search-input,

@@ -119,7 +119,7 @@ define(['jquery', 'helper.history', 'helper.data'], function($, history) {
 
                     showNotification({
                         id: 'mass-block-selection',
-                        message: 'Mass Block Selection Mode',
+                        message: 'Massenblockauswahlmodus',
                         closable: true,
                         closeOnEscKey: true,
                         closeTimer: false,

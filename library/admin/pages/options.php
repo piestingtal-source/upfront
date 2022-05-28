@@ -919,12 +919,12 @@
 				<div id="" class="postbox upfront-admin-options-group">
 
 					<button type="button" class="handlediv" aria-expanded="false">
-						<span class="screen-reader-text"><?php _e('Schriftarten', 'upfront'); ?></span>
+						<span class="screen-reader-text"><?php _e('Fonts', 'upfront'); ?></span>
 						<span class="toggle-indicator" aria-hidden="true"></span>
 					</button>
 
 
-					<h2 class="hndle"><span><?php _e('Schriftarten', 'upfront'); ?></span></h2>
+					<h2 class="hndle"><span><?php _e('Fonts', 'upfront'); ?></span></h2>
 
 					<?php
 
